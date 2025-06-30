@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Music Player</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="MUSIC.css" />
+  
+</head>
+<body>
+  <div class="background"></div>
+  <div class="music-player">
+    <div class="player-header">
+      <h1><i class="fas fa-music"></i> Melody Stream</h1>
+    </div>
+
+    <div class="song-info">
+      <div id="song-title" class="title">No song selected</div>
+      <div id="song-artist" class="artist">Add your favorite songs</div>
+    </div>
+
+    <div id="progress-container" class="progress-container">
+      <div id="progress" class="progress"></div>
+    </div>
+
+    <div class="time-display">
+      <span id="current-time">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="player-controls">
+      <button id="prev-btn" class="control-btn" title="Previous"><i class="fas fa-step-backward"></i></button>
+      <button id="play-btn" class="control-btn main-btn" title="Play"><i class="fas fa-play"></i></button>
+      <button id="next-btn" class="control-btn" title="Next"><i class="fas fa-step-forward"></i></button>
+    </div>
+
+    <div class="add-song">
+      <input type="file" id="song-input" accept="audio/*" multiple webkitdirectory>
+      <label for="song-input" class="add-btn"><i class="fas fa-folder-plus"></i> Add Songs</label>
+    </div>
+
+    <audio id="audio"></audio>
+  </div>
+
+  <script src="MUSIC.js"></script>
+</body>
+</html>
